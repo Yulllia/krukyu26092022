@@ -9,7 +9,8 @@ describe("Chart testing", () => {
     const button = screen.getByTestId("landing");
     fireEvent.click(button);
     const landingNumber = screen.getByTestId("landingNumber");
-    expect(landingNumber.textContent).toBeGreaterThan(0)
-    expect(landingNumber.textContent).toBeLessThan(11)
+    const number = Number(landingNumber.textContent);
+    expect(number).toBeGreaterThan(0)
+    expect(number).toBeLessThan(11)
   });
 });
